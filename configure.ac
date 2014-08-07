@@ -1,0 +1,61 @@
+#! /usr/bin/env bash
+##########################################################################
+##									##
+## Script ID: ./configure.ac						##
+## Author: Mark Grant							##
+##									##
+## Purpose:								##
+## Autoconfigure script file to configure sqlitestudio project.		##
+##									##
+##########################################################################
+
+##########################################################################
+##									##
+## Changelog								##
+##									##
+## Date		Author	Version	Description				##
+##									##
+## 07/08/2014	MG	1.0.1	Initial version.			##
+##									##
+##########################################################################
+
+
+AC_PREREQ([2.65])
+AC_INIT([sqlitestudio Distribution], m4_esyscmd([git describe --always 1>/dev/null 2>/dev/null && git describe --always | tr -d '\n' || echo 'Pre-Release' | tr -d '\n']), [m.grant.prg@gmail.com], [sqlitestudiodist])
+
+AM_INIT_AUTOMAKE
+
+AC_CONFIG_FILES([Makefile
+		src/applications/Makefile
+		src/manpages/man1/Makefile
+		src/scripts/Makefile
+		src/distobjects/Makefile])
+
+AC_CONFIG_MACRO_DIRS([m4])
+
+# Checks for programs.
+
+AC_CHECK_PROG(BASH, bash, yes, no)
+if test "x$BASH" = "xno" ; then
+   	AC_MSG_ERROR([bash not found])
+fi
+
+AC_CHECK_PROG(TAR, tar, yes, no)
+if test "x$TAR" = "xno" ; then
+   	AC_MSG_ERROR([tar not found])
+fi
+
+AC_CHECK_PROG(TXT2MAN, txt2man, yes, no)
+if test "x$TXT2MAN" = "xno" ; then
+   	AC_MSG_ERROR([txt2man not found])
+fi
+
+# Checks for libraries.
+
+# Checks for header files.
+
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+
+AC_OUTPUT

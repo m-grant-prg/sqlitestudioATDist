@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=sqlitestudio
+Comment=sqlitestudio Utility
+Exec=@bindir@/sqlitestudio
+Icon=@datadir@/sqlitestudio/sqlitestudio.png
+Categories=Development;
+Terminal=false
+Type=Application
+StartupNotify=true
