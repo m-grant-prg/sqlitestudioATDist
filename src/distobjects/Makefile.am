@@ -27,7 +27,7 @@ appfilesdir = $(datadir)/sqlitestudio
 	mkdir -p $(@D)
 	rm -f $(@)
 	./extdisttar
-	cp $(distobjectssrcdir)/$(@F) $@
+	cp -v $(distobjectssrcdir)/$(@F) $@
 	chmod a+x $@
 
 sqlitestudio.bin: $(distobjectssrcdir)/sqlitestudio.bin
@@ -39,7 +39,7 @@ sqlitestudio.bin: $(distobjectssrcdir)/sqlitestudio.bin
 
 sqlitestudio.png: $(distobjectssrcdir)/sqlitestudio.png.in
 
-bin_SCRIPTS = ../../distobjects/Share/sqlitestudio.bin
+bin_PROGS = ../../distobjects/Share/sqlitestudio.bin
 
 appfiles_DATA = ../../distobjects/Share/sqlitestudio.png
 
