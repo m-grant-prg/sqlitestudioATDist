@@ -1,0 +1,45 @@
+Contents
+========
+
+1 ... Project Description
+
+2 ... This Repository
+
+3 ... Installation
+
+-------------------------
+
+1 ... Project Description
+=========================
+
+This is an AutoConf / Make project to produce a distribution package for the sqlitestudio project. The sqlitestudio project is a GUI application to design and maintain sqlite databases. The project may be found at http://sqlitestudio.pl/.
+
+If you are looking for a Windows distribution package, an associated GitHub repository sqlitestudioWindowsDist is available. This repository provides the mechanism to produce a Windows msi installer package.
+
+---------------------
+
+2 ... This Repository
+=====================
+
+sqlitestudioLUXDist is written as an AutoConf / Make project. This repository tracks source files and AutoConf and Make script files.
+
+------------------
+
+3 ... Installation
+==================
+
+1 ... Navigate to the project root directory.
+
+2 ... As root or sudo, type './configure'
+
+3 ... As root or sudo, type 'make install clean'
+
+(Quote marks are for textual clarity only).
+
+
+
+To uninstall the package:
+
+1 ... Navigate to the project root directory.
+
+2 ... As root or sudo, type 'make uninstall clean'
