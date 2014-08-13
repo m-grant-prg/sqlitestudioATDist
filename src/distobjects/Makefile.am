@@ -39,7 +39,7 @@ sqlitestudio.bin: $(distobjectssrcdir)/sqlitestudio.bin
 
 sqlitestudio.png: $(distobjectssrcdir)/sqlitestudio.png.in
 
-bin_PROGS = ../../distobjects/Share/sqlitestudio.bin
+bin_PROGRAMS = ../../distobjects/Share/sqlitestudio.bin
 
 appfiles_DATA = ../../distobjects/Share/sqlitestudio.png
 
