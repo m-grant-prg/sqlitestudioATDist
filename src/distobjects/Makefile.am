@@ -39,7 +39,8 @@ sqlitestudio.bin: $(distobjectssrcdir)/sqlitestudio.bin
 
 sqlitestudio.png: $(distobjectssrcdir)/sqlitestudio.png.in
 
-appfiles_DATA = ../../distobjects/Share/sqlitestudio.png ../../distobjects/Share/sqlitestudio.bin
+appfiles_DATA = ../../distobjects/Share/sqlitestudio.png
+appfiles_SCRIPTS = ../../distobjects/Share/sqlitestudio.bin
 
 EXTRA_DIST = $(distobjectssrcdir)/sqlitestudio*.tar.gz $(distobjectssrcdir)/extdisttar \
-		$(distobjectssrcdir)/sqlitestudio.png.in $(distobjectssrcdir)/sqlitestudio.bin
+		$(distobjectssrcdir)/sqlitestudio.png.in
