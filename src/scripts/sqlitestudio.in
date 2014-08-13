@@ -42,7 +42,7 @@
 script_exit_code=0
 osname=$(uname -s)		# Get system name for OS differentiation
 version="1.0.1"			# set version variable
-prglocation=@bindir@		# Path to application directory
+prglocation=@applocation@	# Path to application directory
 outputprefix="sqlitestudio: "
 
 ###############
