@@ -23,14 +23,14 @@
 distobjectssrcdir = $(srcdir)
 appfilesdir = $(datadir)/sqlitestudio
 
-../../distobjects/Share/sqlitestudio: Makefile
+../../distobjects/Share/sqlitestudio.bin: Makefile
 	mkdir -p $(@D)
 	rm -f $(@)
 	./extdisttar
 	cp $(distobjectssrcdir)/$(@F) $@
 	chmod a+x $@
 
-sqlitestudio: $(distobjectssrcdir)/sqlitestudio
+sqlitestudio.bin: $(distobjectssrcdir)/sqlitestudio.bin
 
 ../../distobjects/Share/sqlitestudio.png: Makefile
 	mkdir -p $(@D)
@@ -39,7 +39,8 @@ sqlitestudio: $(distobjectssrcdir)/sqlitestudio
 
 sqlitestudio.png: $(distobjectssrcdir)/sqlitestudio.png.in
 
-appfiles_DATA = ../../distobjects/Share/sqlitestudio.png ../../distobjects/Share/sqlitestudio
+appfiles_DATA = ../../distobjects/Share/sqlitestudio.png
+bin_SCRIPTS = ../../distobjects/Share/sqlitestudio.bin
 
 EXTRA_DIST = $(distobjectssrcdir)/sqlitestudio*.tar.gz $(distobjectssrcdir)/extdisttar \
 		$(distobjectssrcdir)/sqlitestudio.png.in
