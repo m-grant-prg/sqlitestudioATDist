@@ -2,7 +2,7 @@
 Name=sqlitestudio
 Comment=sqlitestudio Utility
 Exec=@bindir@/sqlitestudio
-Icon=@datadir@/sqlitestudio/sqlitestudio.png
+Icon=@pkgdatadir@/sqlitestudio.png
 Categories=Development;
 Terminal=false
 Type=Application
