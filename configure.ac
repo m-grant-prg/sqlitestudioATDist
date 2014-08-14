@@ -5,7 +5,7 @@
 ## Author: Mark Grant							##
 ##									##
 ## Purpose:								##
-## Autoconfigure script file to configure sqlitestudioLUXDist project.	##
+## Autoconfigure script file to configure sqlitestudioATDist project.	##
 ##									##
 ##########################################################################
 
@@ -17,12 +17,13 @@
 ##									##
 ## 07/08/2014	MG	1.0.1	Initial version.			##
 ## 13/08/2014	MG	1.0.2	Changed name to use LUXDist.		##
+## 14/08/2014	MG	1.0.3	Changed name to ATDist.			##
 ##									##
 ##########################################################################
 
 
 AC_PREREQ([2.65])
-AC_INIT([sqlitestudio Linux / Unix Distribution], m4_esyscmd([git describe --always 1>/dev/null 2>/dev/null && git describe --always | tr -d '\n' || echo 'Pre-Release' | tr -d '\n']), [m.grant.prg@gmail.com], [sqlitestudioluxdist])
+AC_INIT([sqlitestudio AutoTools Distribution], m4_esyscmd([git describe --always 1>/dev/null 2>/dev/null && git describe --always | tr -d '\n' || echo 'Pre-Release' | tr -d '\n']), [m.grant.prg@gmail.com], [sqlitestudioatdist])
 
 AM_INIT_AUTOMAKE
 
