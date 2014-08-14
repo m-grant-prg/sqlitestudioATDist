@@ -112,7 +112,7 @@ do
 	esac
 done
 
-$prglocation/sqlitestudio.bin
+$prglocation/sqlitestudio
 std_cmd_err_handler $?
 
 script_exit_code=0
