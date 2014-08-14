@@ -20,7 +20,7 @@
 ##########################################################################
 
 
-applocation = $(datadir)/sqlitestudio
+applocation = $(pkglibexecdir)
 
 edit = sed \
 	-e 's|@bindir[@]|$(bindir)|g' \

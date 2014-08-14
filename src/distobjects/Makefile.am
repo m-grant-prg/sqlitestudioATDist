@@ -22,6 +22,7 @@
 
 distobjectssrcdir = $(srcdir)
 pkgfilesdir = $(pkgdatadir)
+pkgappsdir = $(pkglibexecdir)
 
 ../../distobjects/Share/sqlitestudio: Makefile
 	mkdir -p $(@D)
@@ -39,8 +40,8 @@ sqlitestudio: $(distobjectssrcdir)/sqlitestudio
 
 sqlitestudio.png: $(distobjectssrcdir)/sqlitestudio.png.in
 
-pkgdata_DATA = ../../distobjects/Share/sqlitestudio.png
-pkgdata_SCRIPTS = ../../distobjects/Share/sqlitestudio
+pkgfiles_DATA = ../../distobjects/Share/sqlitestudio.png
+pkgapps_SCRIPTS = ../../distobjects/Share/sqlitestudio
 
 EXTRA_DIST = $(distobjectssrcdir)/sqlitestudio*.tar.gz $(distobjectssrcdir)/extdisttar \
 		$(distobjectssrcdir)/sqlitestudio.png.in
