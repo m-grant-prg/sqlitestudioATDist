@@ -18,6 +18,9 @@
 ## 07/08/2014	MG	1.0.1	Initial version.			##
 ## 13/08/2014	MG	1.0.2	Changed name to use LUXDist.		##
 ## 14/08/2014	MG	1.0.3	Changed name to ATDist.			##
+## 23/08/2014	MG	1.0.4	Added AC_CANONICAL_HOST statement to	##
+##				provide variables to support change to	##
+##				an architecture-dependent install.	##
 ##									##
 ##########################################################################
 
@@ -51,6 +54,8 @@ AC_CHECK_PROG(TXT2MAN, txt2man, yes, no)
 if test "x$TXT2MAN" = "xno" ; then
    	AC_MSG_ERROR([txt2man not found])
 fi
+
+AC_CANONICAL_HOST
 
 # Checks for libraries.
 
