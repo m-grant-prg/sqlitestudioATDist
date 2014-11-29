@@ -16,6 +16,8 @@
 ## Date		Author	Version	Description				##
 ##									##
 ## 07/08/2014	MG	1.0.1	Started versioning of this script.	##
+## 29/11/2014	MG	1.0.2	Add script substitution variable for	##
+##				overall package version.		##
 ##									##
 ##########################################################################
 
@@ -27,7 +29,8 @@ edit = sed \
 	-e 's|@pkgdatadir[@]|$(pkgdatadir)|g' \
 	-e 's|@sysconfdir[@]|$(sysconfdir)|g' \
 	-e 's|@applocation[@]|$(applocation)|g' \
-	-e 's|@prefix[@]|$(prefix)|g'
+	-e 's|@prefix[@]|$(prefix)|g' \
+	-e 's|@pkgversion[@]|$(pkgversion)|g'
 
 scriptssrcdir = $(srcdir)
 

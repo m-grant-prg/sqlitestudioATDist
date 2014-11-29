@@ -37,6 +37,7 @@
 ##				extension.				##
 ## 29/11/2014	MG	1.0.3	Switched from getopts to GNU getopt to	##
 ##				allow long options.			##
+## 29/11/2014	MG	1.0.4	Add overall package version to -V.	##
 ##									##
 ##########################################################################
 
@@ -45,9 +46,10 @@
 ####################
 script_exit_code=0
 osname=$(uname -s)		# Get system name for OS differentiation
-version="1.0.3"			# set version variable
+version="1.0.4"			# set version variable
 prglocation=@applocation@	# Path to application directory
 outputprefix="sqlitestudio: "
+packageversion=@pkgversion@		# Version of the complete package
 
 # See getopt comments at the start of "Main"
 case $osname in
@@ -131,7 +133,8 @@ do
 		script_exit
 		;;
 	-V|--version)
-		echo "$0 Version "$version
+		echo "$0 Script version "$version
+		echo "$0 Package version "$packageversion
 		shift
 		script_exit_code=0
 		script_exit
