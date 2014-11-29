@@ -1,4 +1,3 @@
-#! /usr/bin/env bash
 ##########################################################################
 ##									##
 ## Script ID: ./configure.ac						##
@@ -21,6 +20,7 @@
 ## 23/08/2014	MG	1.0.4	Added AC_CANONICAL_HOST statement to	##
 ##				provide variables to support change to	##
 ##				an architecture-dependent install.	##
+## 29/11/2014	MG	1.0.5	Remove redundant hashpling.		##
 ##									##
 ##########################################################################
 
