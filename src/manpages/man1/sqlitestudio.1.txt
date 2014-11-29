@@ -5,9 +5,9 @@ sqlitestudio [OPTION]
 DESCRIPTION
 A script invoking the sqlitestudio application.
 OPTIONS
--h  prints usage information
+-h, --help  prints usage information
 
--V  prints version information
+-V, --version  prints version information
 EXIT STATUS
 0
 if OK,
