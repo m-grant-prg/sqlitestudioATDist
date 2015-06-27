@@ -45,6 +45,8 @@ AC_CONFIG_FILES([Makefile
 
 AC_CONFIG_MACRO_DIRS([m4])
 
+AC_CANONICAL_HOST
+
 # Checks for programs.
 AC_MSG_NOTICE([checking for required generic programs])
 AC_CHECK_PROG(BASH, bash, yes, no)
