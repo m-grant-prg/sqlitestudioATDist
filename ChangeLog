@@ -1,3 +1,7 @@
+2015-06-27 v 1.0.7 Mark Grant <m.grant.prg@gmail.com>
+	* Remove BSD support.
+	sqlitestudio script 	now at version 1.0.5
+	
 2014-11-29 v 1.0.6 Mark Grant <m.grant.prg@gmail.com>
 	* Add support for including overall package version in script --version.
 	Switch to use of GNU getopt to allow long options and implement them.
