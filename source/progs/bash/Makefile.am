@@ -1,11 +1,11 @@
 #! /usr/bin/env bash
 ##########################################################################
 ##									##
-## Script ID: src/scripts/Makefile.am					##
+## Script ID: source/progs/bash/Makefile.am				##
 ## Author: Mark Grant							##
 ##									##
 ## Purpose:								##
-## Automake script file to generate sqlitestudio script from source.	##
+## AutoMake script file to generate sqlitestudio script from source.	##
 ##									##
 ##########################################################################
 
@@ -18,34 +18,25 @@
 ## 07/08/2014	MG	1.0.1	Started versioning of this script.	##
 ## 29/11/2014	MG	1.0.2	Add script substitution variable for	##
 ##				overall package version.		##
+## 20/10/2015	MG	1.0.3	Restructure to conform to AutoTools	##
+##				General Template v1.0.5.		##
 ##									##
 ##########################################################################
 
 
-applocation = $(pkglibexecdir)
-
-edit = sed \
-	-e 's|@bindir[@]|$(bindir)|g' \
-	-e 's|@pkgdatadir[@]|$(pkgdatadir)|g' \
-	-e 's|@sysconfdir[@]|$(sysconfdir)|g' \
-	-e 's|@applocation[@]|$(applocation)|g' \
-	-e 's|@prefix[@]|$(prefix)|g' \
-	-e 's|@pkgversion[@]|$(pkgversion)|g'
-
-scriptssrcdir = $(srcdir)
-
-../../scripts/sqlitestudio: Makefile
+sqlitestudio: Makefile
 	mkdir -p $(@D)
 	rm -f $@ $@.tmp
-	test -f ./$@.in || scriptssrcdir=$(scriptssrcdir)/; \
-	$(edit) $${scriptssrcdir}$(@F).in >$@.tmp
-
+	test -f ./$@.in || srcdir=$(srcdir)/; \
+	$(edit) $${srcdir}$(@F).in > $@.tmp
 	mv $@.tmp $@
-
 	chmod a+x $@
 
-sqlitestudio: $(scriptssrcdir)/sqlitestudio.in
+sqlitestudio: $(srcdir)/sqlitestudio.in
 
-bin_SCRIPTS = ../../scripts/sqlitestudio
+bin_SCRIPTS = sqlitestudio
 
-EXTRA_DIST = $(scriptssrcdir)/sqlitestudio.in
+EXTRA_DIST = $(srcdir)/sqlitestudio.in
+
+CLEANFILES = *.tmp sqlitestudio
+

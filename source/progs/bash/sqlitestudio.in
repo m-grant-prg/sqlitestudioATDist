@@ -39,6 +39,9 @@
 ##				allow long options.			##
 ## 29/11/2014	MG	1.0.4	Add overall package version to -V.	##
 ## 27/06/2015	MG	1.0.5	Remove BSD support.			##
+## 20/10/2015	MG	1.0.6	Change substitution variable for path	##
+##				to sqlitestudio binaries to conform	##
+##				with AutoTools General Template v1.0.5.	##
 ##									##
 ##########################################################################
 
@@ -46,8 +49,8 @@
 ## Init variables ##
 ####################
 script_exit_code=0
-version="1.0.5"			# set version variable
-prglocation=@applocation@	# Path to application directory
+version="1.0.6"			# set version variable
+prglocation=@pkglibexecdir@	# Path to sqlitestudio binaries.
 outputprefix="sqlitestudio: "
 packageversion=@pkgversion@	# Version of the complete package
 

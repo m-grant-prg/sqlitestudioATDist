@@ -1,11 +1,11 @@
 #! /usr/bin/env bash
 ##########################################################################
 ##									##
-## Script ID: src/manpages/man1/Makefile.am				##
+## Script ID: source/man/man1/Makefile.am				##
 ## Author: Mark Grant							##
 ##									##
 ## Purpose:								##
-## Automake script file to generate sqlitestudio manual pages from	##
+## AutoMake script file to generate sqlitestudio manual pages from	##
 ## source.								##
 ##									##
 ##########################################################################
@@ -17,20 +17,25 @@
 ## Date		Author	Version	Description				##
 ##									##
 ## 07/08/2014	MG	1.0.1	Started versioning of this script.	##
+## 20/10/2015	MG	1.0.2	Restructure to conform to AutoTools	##
+##				General Template v1.0.5.		##
 ##									##
 ##########################################################################
 
 
-manpagessrcdir = $(srcdir)
-
-../../../manpages/man1/sqlitestudio.1: Makefile
+sqlitestudio.1: Makefile
 	mkdir -p $(@D)
-	rm -f $@
-	txt2man -t sqlitestudio -s 1 -v "sqlitestudio Manual" \
-		$(manpagessrcdir)/$(@F).txt > $@
+	rm -f $@ $@.tmp
+	$(edit) $(srcdir)/$(@F).txt > $@.tmp
+	mv $@.tmp $@
+	txt2manwrap $(@F) 1 "sqlitestudio Manual" $(srcdir)/$(@F).txt $@
+	rm -f $@.tmp
 
-sqlitestudio.1: $(manpagessrcdir)/sqlitestudio.1.txt
+sqlitestudio.1: $(srcdir)/sqlitestudio.1.txt
 
-man1_MANS = ../../../manpages/man1/sqlitestudio.1
+man_MANS = sqlitestudio.1
 
-EXTRA_DIST = $(manpagessrcdir)/sqlitestudio.1.txt
+EXTRA_DIST = $(srcdir)/sqlitestudio.1.txt
+
+CLEANFILES = *.tmp sqlitestudio.1
+
