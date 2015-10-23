@@ -1,5 +1,7 @@
 2015-10-21 v 1.0.8 Mark Grant <m.grant.prg@gmail.com>
-	* Restructure to conform to AutoTools General Template v1.0.5.
+	* Conform to AutoTools General Template v1.0.6, said release being an
+	extension to include examples copied from this project.
+	Restructure to conform to AutoTools General Template v1.0.5.
 
 2015-06-27 v 1.0.7 Mark Grant <m.grant.prg@gmail.com>
 	* Remove BSD support.
