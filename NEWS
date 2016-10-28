@@ -1,3 +1,7 @@
+Release 1.0.9 2016-10-28
+Merge latest upstream releases. v3.0.7 for 32 bit and v3.1.0 for 64 bit.
+Update README to reference the Debian package available in the PPA.
+
 Release 1.0.8 2015-10-21
 Conform to AutoTools General Template v1.0.6, said release being an extension
 to include examples copied from this project.
