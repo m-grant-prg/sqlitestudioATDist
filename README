@@ -12,16 +12,27 @@ Contents
 1 ... Project Description
 =========================
 
-This is an AutoTools project to produce a distribution package for the sqlitestudio project. The sqlitestudio project is a GUI application to design and maintain sqlite databases. The project may be found at http://sqlitestudio.pl/.
+This is an AutoTools project to produce a distribution package for the
+sqlitestudio project. The sqlitestudio project is a GUI application to design
+and maintain sqlite databases. The project may be found at
+http://sqlitestudio.pl/.
 
-If you are looking for a Windows distribution package, an associated GitHub repository sqlitestudioWindowsDist is available. This repository provides the mechanism to produce a Windows msi installer package.
+If you are looking for a Windows distribution package, an associated GitHub
+repository sqlitestudioWindowsDist is available. This repository provides the
+mechanism to produce a Windows msi installer package.
+
+An Ubuntu Debian package is available from:-
+https://launchpad.net/~m-grant-prg/+archive/ubuntu/sqlitestudio
+Instructions for how to add this PPA to your software sources are located at
+this address.
 
 ---------------------
 
 2 ... This Repository
 =====================
 
-sqlitestudioATDist is written as an AutoTools project. This repository tracks source files and AutoConf and Make script files.
+sqlitestudioATDist is written as an AutoTools project. This repository tracks
+source files and AutoConf and Make script files.
 
 ------------------
 
@@ -30,7 +41,7 @@ sqlitestudioATDist is written as an AutoTools project. This repository tracks so
 
 1 ... Navigate to the project root directory.
 
-2 ... As root or sudo, type './configure'
+2 ... As a normal user type './configure'
 
 3 ... As root or sudo, type 'make install clean'
 
