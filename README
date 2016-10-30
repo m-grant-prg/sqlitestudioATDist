@@ -17,15 +17,6 @@ sqlitestudio project. The sqlitestudio project is a GUI application to design
 and maintain sqlite databases. The project may be found at
 http://sqlitestudio.pl/.
 
-If you are looking for a Windows distribution package, an associated GitHub
-repository sqlitestudioWindowsDist is available. This repository provides the
-mechanism to produce a Windows msi installer package.
-
-An Ubuntu Debian package is available from:-
-https://launchpad.net/~m-grant-prg/+archive/ubuntu/sqlitestudio
-Instructions for how to add this PPA to your software sources are located at
-this address.
-
 ---------------------
 
 2 ... This Repository
