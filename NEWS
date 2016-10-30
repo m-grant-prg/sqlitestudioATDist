@@ -1,3 +1,12 @@
+Release 1.1.0 2016-10-30
+Accommodate new upstream structure.
+	Change to build & install new files and directories.
+	Add new man page for new cli script.
+	Add new invocation script for new cli executable.
+Remove references to obsolete & deleted repositories.
+	Remove ref to Windows github repo.
+	Remove ref to Launchpad PPA.
+
 Release 1.0.9 2016-10-28
 Merge latest upstream releases. v3.0.7 for 32 bit and v3.1.0 for 64 bit.
 Update README to reference the Debian package available in the PPA.
