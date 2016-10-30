@@ -1,18 +1,18 @@
 #! /usr/bin/env bash
 ##########################################################################
 ##									##
-##	sqlitestudio is automatically generated,			##
+##	sqlitestudiocli is automatically generated,			##
 ##		please do not modify!					##
 ##									##
 ##########################################################################
 
 ##########################################################################
 ##									##
-## Script ID: sqlitestudio						##
+## Script ID: sqlitestudiocli						##
 ## Author: Mark Grant							##
 ##									##
 ## Purpose:								##
-## To invoke the sqlitestudio.bin application.				##
+## To invoke the sqlitestudiocli application.				##
 ##									##
 ## Syntax:	sqlitestudio [ -h || --help || -V || --version ]	##
 ##									##
@@ -32,18 +32,7 @@
 ##									##
 ## Date		Author	Version	Description				##
 ##									##
-## 07/08/2014	MG	1.0.1	Created.				##
-## 25/08/2014	MG	1.0.2	Reverted to use upstream binary .bin	##
-##				extension.				##
-## 29/11/2014	MG	1.0.3	Switched from getopts to GNU getopt to	##
-##				allow long options.			##
-## 29/11/2014	MG	1.0.4	Add overall package version to -V.	##
-## 27/06/2015	MG	1.0.5	Remove BSD support.			##
-## 20/10/2015	MG	1.0.6	Change substitution variable for path	##
-##				to sqlitestudio binaries to conform	##
-##				with AutoTools General Template v1.0.5.	##
-## 29/10/2016	MG	1.0.7	Accommodate change to executable	##
-##				filename.				##
+## 29/10/2016	MG	1.0.1	Created.				##
 ##									##
 ##########################################################################
 
@@ -51,9 +40,9 @@
 ## Init variables ##
 ####################
 script_exit_code=0
-version="1.0.7"			# set version variable
-prglocation=@pkglibexecdir@	# Path to sqlitestudio binaries.
-outputprefix="sqlitestudio: "
+version="1.0.1"			# set version variable
+prglocation=@pkglibexecdir@	# Path to sqlitestudiocli binaries.
+outputprefix="sqlitestudiocli: "
 packageversion=@pkgversion@	# Version of the complete package
 
 ###############
@@ -145,7 +134,7 @@ then
 	script_exit
 fi
 
-$prglocation/sqlitestudio
+$prglocation/sqlitestudiocli
 std_cmd_err_handler $?
 
 script_exit_code=0

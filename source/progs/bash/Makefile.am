@@ -5,7 +5,7 @@
 ## Author: Mark Grant							##
 ##									##
 ## Purpose:								##
-## AutoMake script file to generate sqlitestudio script from source.	##
+## AutoMake script file to generate sqlitestudio scripts from source.	##
 ##									##
 ##########################################################################
 
@@ -20,11 +20,13 @@
 ##				overall package version.		##
 ## 20/10/2015	MG	1.0.3	Restructure to conform to AutoTools	##
 ##				General Template v1.0.5.		##
+## 30/10/2016	MG	1.1.0	Add script for new upstream program	##
+##				sqlitestudiocli.			##
 ##									##
 ##########################################################################
 
 
-sqlitestudio: Makefile
+sqlitestudio sqlitestudiocli: Makefile
 	mkdir -p $(@D)
 	rm -f $@ $@.tmp
 	test -f ./$@.in || srcdir=$(srcdir)/; \
@@ -33,10 +35,11 @@ sqlitestudio: Makefile
 	chmod a+x $@
 
 sqlitestudio: $(srcdir)/sqlitestudio.in
+sqlitestudiocli: $(srcdir)/sqlitestudiocli.in
 
-bin_SCRIPTS = sqlitestudio
+bin_SCRIPTS = sqlitestudio sqlitestudiocli
 
-EXTRA_DIST = $(srcdir)/sqlitestudio.in
+EXTRA_DIST = $(srcdir)/sqlitestudio.in $(srcdir)/sqlitestudiocli.in
 
-CLEANFILES = *.tmp sqlitestudio
+CLEANFILES = *.tmp sqlitestudio sqlitestudiocli
 
